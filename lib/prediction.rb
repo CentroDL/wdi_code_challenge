@@ -16,18 +16,18 @@ class Prediction
 
 
   def self.first_name_dot_last_name(fname, lname, domain)
-      "#{fname.downcase}.#{lname.downcase}@#{domain.downcase}"
+    "#{fname.downcase}.#{lname.downcase}@#{domain.downcase}"
   end
 
   def self.first_name_dot_last_initial(fname, lname, domain)
-       "#{fname.downcase}.#{lname.downcase[0]}@#{domain.downcase}"
+    "#{fname.downcase}.#{lname.downcase[0]}@#{domain.downcase}"
   end
 
-  def first_initial_dot_last_name(fname, lname, domain)
-
+  def self.first_initial_dot_last_name(fname, lname, domain)
+    "#{fname.downcase[0]}.#{lname.downcase[0]}.#{domain.downcase}"
   end
 
-  def first_initial_dot_last_initial(fname, lname, domain)
+  def self.first_initial_dot_last_initial(fname, lname, domain)
 
   end
 

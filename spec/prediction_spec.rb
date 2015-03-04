@@ -12,7 +12,9 @@ describe "Prediction" do
       expect( Prediction.email("Robb", "Stark", "direwolves.com")).to eq("robb.s@direwolves.com")
     end
 
-
+    it "should match littlefinger.com emails to FIRSTINITIAL.LASTINITIAL patterns" do
+      expect( Prediction.email("Petyr", "Baelish", "littlefinger.com")).to eq("p.b@littlefinger.com")
+    end
 
   end
 
