@@ -29,7 +29,7 @@ class Prediction
   end
 
   def self.first_initial_dot_last_name(fname, lname, domain)
-    "#{fname.downcase[0]}.#{lname.downcase}.#{domain.downcase}"
+    "#{fname.downcase[0]}.#{lname.downcase}@#{domain.downcase}"
   end
 
   def self.first_initial_dot_last_initial(fname, lname, domain)

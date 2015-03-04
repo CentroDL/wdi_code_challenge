@@ -17,7 +17,7 @@ describe "Prediction" do
     end
 
     it "should match unknown domains to all possible patterns" do
-      expect( Prediction.email("Bob", "Ross", "bobross.com").join ).to eq(["bob.ross@bobross.com","bob.r@bobross.com", "b.ross@bobross.com", "b.r@bobross.com"].join )
+      expect( Prediction.email("Bob", "Ross", "bobross.com") ).to eq(["bob.ross@bobross.com","bob.r@bobross.com", "b.ross@bobross.com", "b.r@bobross.com"])
     end
   end
 
