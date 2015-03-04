@@ -10,7 +10,12 @@ class Prediction
     elsif domain == 'littlefinger.com'
       first_initial_dot_last_initial fname, lname, domain
     else
-      # "this will call all methods and return them as an array"
+      possible_emails = []
+      possible_emails << first_name_dot_last_name( fname, lname, domain)
+      possible_emails << first_name_dot_last_initial( fname, lname, domain)
+      possible_emails << first_initial_dot_last_name( fname, lname, domain)
+      possible_emails << first_initial_dot_last_initial( fname, lname, domain)
+      possible_emails
     end
   end
 
@@ -24,11 +29,11 @@ class Prediction
   end
 
   def self.first_initial_dot_last_name(fname, lname, domain)
-    "#{fname.downcase[0]}.#{lname.downcase[0]}.#{domain.downcase}"
+    "#{fname.downcase[0]}.#{lname.downcase}.#{domain.downcase}"
   end
 
   def self.first_initial_dot_last_initial(fname, lname, domain)
-
+    "#{fname.downcase[0]}.#{lname.downcase[0]}@#{domain.downcase}"
   end
 
 
