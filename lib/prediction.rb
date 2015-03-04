@@ -8,7 +8,9 @@ class Prediction
     elsif domain == "direwolves.com"
       first_name_dot_last_initial fname, lname, domain
     elsif domain == 'littlefinger.com'
-    elsif domain == 'citadel.gov'
+      first_initial_dot_last_initial fname, lname, domain
+    else
+      # "this will call all methods and return them as an array"
     end
   end
 
