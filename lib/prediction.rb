@@ -17,12 +17,7 @@ class Prediction
     elsif @domain == 'littlefinger.com'
       first_initial_dot_last_initial
     else
-      possible_emails = []
-      possible_emails << first_name_dot_last_name
-      possible_emails << first_name_dot_last_initial
-      possible_emails << first_initial_dot_last_name
-      possible_emails << first_initial_dot_last_initial
-      # possible_emails
+      all_possible_emails
     end
   end
 
@@ -40,6 +35,14 @@ class Prediction
 
   def first_initial_dot_last_initial
     "#{f_name.downcase[0]}.#{l_name.downcase[0]}@#{domain.downcase}"
+  end
+
+  def all_possible_emails
+      possible_emails = []
+      possible_emails << first_name_dot_last_name
+      possible_emails << first_name_dot_last_initial
+      possible_emails << first_initial_dot_last_name
+      possible_emails << first_initial_dot_last_initial
   end
 
 end#Prediction
