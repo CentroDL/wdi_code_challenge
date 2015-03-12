@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/CentroDL/wdi_code_challenge.svg?branch=master)](https://travis-ci.org/CentroDL/wdi_code_challenge)
+
 #Email Prediction
 
 This is a proposed solution to the following code challenge presented [here](https://gist.github.com/h4w5/a4a3747c0368fcdec044).
